@@ -1,7 +1,0 @@
-[submodule "assets/projects/Piano"]
-path = assets/projects/Piano
-url = https://github.com/EnzoGabrielCode/Piano
-
-[submodule "assets/projects/mundo-invertido"]
-path = assets/projects/mundo-invertido
-url = https://github.com/EnzoGabrielCode/landing-page-mundo-invertido
