@@ -318,11 +318,16 @@ footer p{
 
 .card__cover {
     width: 100%;
+    
+    object-fit:contain;
+    object-position: center;
+}
+.card__coverR {
+    width: 200px;
     border-radius: 0.5rem;
     object-fit:contain;
     object-position: center;
 }
-
 .card__body{
    display: flex;
    flex-direction: column;
