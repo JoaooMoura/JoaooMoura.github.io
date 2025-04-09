@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+
+  @font-face {
+    font-family: anime;
+    src: url(go3v2.ttf);
+  }
+  
+  * {
+  box-sizing: border-box; /* mesmo usando padding ou border o tamanho não se altera*/
+}
+
+html, body {
+    height: auto;
+    
+}
+
+body {
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    background: #1a1a1db9;
+    color: white;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.row::after { /* texto que pode ser colocado após */
+  content: ""; /* conteúdo vazio */
+  clear: both; /* limpar float .*/
+  display: table; /* elemento table */
+}
+
+[class*="col-"] /* classe/tamanho da coluna */
+ { 
+  float: left;
+  padding: 15px;
+}
+
+html {
+  
+  font-family: Tahoma, sans-serif;
+	background:url(fundo2.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  z-index: -1;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+  
+}
+
+ 
+
+header {
+  background-color: #0099cc;
+  font-size: 25px;
+  font-family: anime;
+  color: #fff;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #667;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+li:hover {
+  background-color: #4b57c4;
+  box-shadow: 10px 5px #1f00cc;
+  position: relative; 
+  top: 10px; left: 20px;
+  }
+
+.classeE {
+  background-color: #0099cc;
+  padding: 15px;
+  color:black;
+  position: absolute;
+  right: 10px;
+  bottom: 10%;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+footer {
+  background-color: #0099cc;
+  color: #ff0000;
+  position:relative;
+  width:100%;
+  font-family: 'Anime';
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+  font-family: 'Anime';
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For COMPUTER */
+  .col-1 {width: 15%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+img {height:150px;
+	width:280px;}
+
+</style>
+</head>
+<body>
+
+<header>
+  <center>
+    <h1>Shark Animes</h1>
+  </center>
+</header>
+<div id="launcherBg">
+ 
+  <div class="banner-background-after"></div>
+  </div>
+<div class="row">
+  <div class="col-3 col-s-3">
+    <ul>
+     <li><a href="https://youtu.be/IV0-SYn3YuM" target="_parent"> <img src="FotoA.jpg" alt="filmeA"></a></li>
+     <li><a href="https://youtu.be/LM1VWi1-br8" target="_parent"><img src="fotoB.jpg"></a></li>
+	   <li><a href="https://youtu.be/SChzkM2sxAQ" target="_parent"><img src="fotoz.jpg"></a></li>
+    </ul>
+  </div>
+
+  <div class="col-6 col-s-9">
+    <h1>Blue Period</h1>
+    <br><br><br><br><br>
+    <h1>Death Note</h1>
+    <br><br><br><br><br>
+    <h1>Great Pretender</h1>
+    <p></p>
+  </div>
+
+  <div class="col-3 col-s-12">
+    <div class="classeE">
+      <h2>Olá, Seja bem vindo!</h2>
+      <h3>Confira os animes mais assistidos: </h3>
+      <h2>Blue Period</h2>
+      <h2>Death Note</h2>
+      <h2>Great Pretender</h2>
+      
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>By João Moura</p>
+</footer>
+
+</body>
+</html>
