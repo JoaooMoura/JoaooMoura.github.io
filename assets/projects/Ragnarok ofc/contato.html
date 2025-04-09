@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAGNARÖK STORE</title>
+    <link rel="icon" href="icon.png" sizes="32x32">
+    <style>
+        * { margin: 0; padding: 5px; box-sizing: border-box; }
+
+        body {
+            font-family: "Bahnschrift Regular";
+            background: url("fundod.png");
+            color: white;
+            background-attachment: fixed;
+        }
+
+        a { text-decoration: none; color: #ff914d; }
+
+        #txt1 {
+            width: 332px;
+            height: 100px;
+            position: absolute;
+            top: 10px;
+            font-family: fantasy;
+            font-size: 50px;
+            color: #ff914d;
+            font-style: oblique;
+        }
+
+        #txt2 {
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top: 53px;
+            left: 90px;
+            font-family: fantasy;
+            font-size: 50px;
+            color: white;
+            font-style: oblique;
+        }
+
+        ul.menu {
+            text-align: center;
+            font-family: fantasy;
+            font-style: oblique;
+            position: absolute;
+            left: 55%;
+        }
+
+        ul.menu li {
+            display: inline-block;
+        }
+
+        ul.menu li a {
+            color: #ff914d;
+            font-size: 30px;
+            transition: 0.3s;
+        }
+
+        ul.menu li a:hover {
+            color: white;
+        }
+
+        .contato-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 150px auto 50px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .contato-container txt {
+            font-size: 32px;
+            color: #ff914d;
+            font-family: fantasy;
+            font-style: oblique;
+            margin-bottom: 20px;
+        }
+
+        .contato-container p {
+            font-size: 18px;
+            color: #ddd;
+            line-height: 1.6;
+            font-family: fantasy;
+            font-style: oblique;
+        }
+
+        .contato-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contato-links a img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        .contato-links a:hover img {
+            transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="menu">
+        <li><a href="index.html">PÁGINA INICIAL</a></li>
+        <li><a href="cardápio.html">PRODUTOS</a></li>
+        <li><a href="sobre.html">SOBRE</a></li>
+        <li><a href="contato.html">CONTATO</a></li>
+    </ul>
+
+    <div id="txt1">RAGNARÖK</div>
+    <div id="txt2">STORE</div>
+
+    
+    <div class="contato-container">
+        <txt>Contato</txt>
+        <p>
+            Entre em contato conosco através das nossas redes sociais ou e-mail. Estamos sempre prontos para ajudar!
+        </p>
+
+       
+        <div class="contato-links">
+          
+            <a href="https://web.whatsapp.com/" target="_blank">
+                <img src="wpp.png" alt="WhatsApp">
+            </a>
+
+            
+            <a href="https://gmail.com" target="_blank">
+                <img src="gm.png" alt="Gmail">
+            </a>
+
+            
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="ig.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
