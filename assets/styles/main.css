@@ -5,12 +5,16 @@
     --primary-color: #f0f0f0;
 
     --primary-bg-color: #111217;
-    --secondary-bg-color: #28292E;
+    --header-bg-color: #1d0e8d;
+    --secondary-bg-color: #1d0e8d;
     --primary-border-color: #28292E;
-    --secondary-border-color: #56575A;
+    --secondary-border-color: #F0F0F0;
 
     --title-color: #F0F0F0;
+    --title-secundary-color: #F0F0F0;
     --text-color: #9A9A9A;
+    --title-header-color: #F0F0F0;
+	--text-header-color: #9A9A9A;
     --link-color: #9A9A9A;
     --icon-color: #C7C8C9;
 }
@@ -19,25 +23,31 @@
     --primary-color: #0B0B0F;
     
 	--primary-bg-color: #E9E9E9;
-	--secondary-bg-color: #C7C8C9;
+	--secondary-bg-color: #1d0e8d;
 	--primary-border-color: #C7C8C9;
 	--secondary-border-color: #9A9A9C;
+    
 
 	--title-color: #0B0B0F;
+    --title-secundary-color: #F0F0F0;
 	--text-color: #28292E;
+    --title-header-color: #F0F0F0;
+	--text-header-color: #9A9A9A;
 	--link-color: #28292E;
 	--icon-color: #56575A;
 }
 
-html[data-theme="light"] .brand__logo,
-html[data-theme="light"] .brand__name{
-    filter: invert(1);
+
+html[data-theme="light"] .skills .skills__logo {
+    filter: none;
 }
 
-html[data-theme="light"] .skills__logo{
+html[data-theme="light"] .skills__logo {
+    filter: invert(80%); 
+}
+html[data-theme="light"] .menu.menu--social .menu__link {
     filter: invert(80%);
 }
-
 body{
     background-color: var(--primary-bg-color);
     font-family: "Inter", sans-serif;
@@ -59,12 +69,17 @@ i{
 }
 
 b{
-    font-weight: 400;
+    font-weight: 300;
+    font-size: 3rem;
+    
 }
-
+html{
+    scroll-padding-top: 70px;
+}
 h1{
     font-size: 2.5rem;
     font-weight: 200;
+    margin-bottom: 10rem;
 }
 
 h2{
@@ -107,27 +122,38 @@ p{
     align-items: center;
     width: 100%;
     padding: 0.5rem 1rem;
+    height: 5.5rem;
     z-index: 2;
 }
 
 .header__toggle{
     display: flex;
     justify-content: flex-end;
+    
 }
-
+html[data-theme="light"] .header__toggle{
+filter: invert(80%);
+}
+html[data-theme="light"] .header__brand .brand__logo{
+filter: invert(80%);
+}
 .header__brand .brand__logo{
     width: 2.5rem;
     height: 2.5rem;
+    
+    
 }
 
 .header__brand .brand__name{
-    width: 100px;
-    height: 15px;
+    width: 6.5rem;
+    height: 1rem;
+    
 }
 
 #toggleTheme{
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--title-header-color);
+    
     cursor: pointer;
     transition: ease-in-out .4s;
 }
@@ -135,7 +161,7 @@ p{
 .menu{
     display: flex;
     align-items: center;
-    background: var(--primary-bg-color);
+    background: var(--header-bg-color);
 }
 
 .menu__item{
@@ -152,6 +178,7 @@ p{
     width: 100vw;
     position: fixed;
     bottom: 0;
+    z-index: 1;
     justify-content: space-between;
     border-top: 1px solid var(--primary-border-color);
 }
@@ -169,12 +196,12 @@ p{
 .menu__link.active .menu__text,
 .menu__link:hover .menu__icon, 
 .menu__link:hover .menu__text{
-    color: var(--primary-color);
+    color: var(--title-header-color);
     font-weight: 600;
 }
 
 .menu__icon, .menu__text{
-    color: var(--text-color);
+    color: var(--text-header-color);
 }
 
 .menu__icon{
@@ -182,7 +209,7 @@ p{
 }
 
 .menu__text{
-    font-size: .75rem;
+    font-size: .90rem;
     text-transform: uppercase;
 }
 
@@ -199,6 +226,7 @@ p{
 }
 
 .menu--social{
+    background: var(--primary-bg-color);
     gap: 1rem;
 }
 
@@ -235,7 +263,7 @@ p{
     border: 1px solid var(--primary-color);
 }
 
-main, .projects, .about, .contat{
+ .projects, .about, .contat{
     padding: 2.5rem 1rem;
 }
 
@@ -298,7 +326,9 @@ footer p{
 .skills__logo {
     height: 2.4rem;
 }
-
+.skills h2{
+    color: var(--title-secundary-color)
+}
 .projects{
     display: flex;
     flex-direction: column;
@@ -383,35 +413,43 @@ footer p{
     width: auto;
     margin: auto;
 }
-
+main{
+    padding: 1.5rem;
+}
 .about {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem
+    align-items: center;
+    gap: 2rem;
   }
   
   .about__content1, .about__content2 {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    justify-content:space-between;
     gap: 2rem;
+    
   }
   
   .about__photo {
-    width: 100%;
+    width: 15rem;
     object-fit: cover;
     object-position: center;
     pointer-events: none;
-    border-radius: 50rem;
+    height: 15rem;
+    border-radius: 200rem;
     border: 1px solid var(--primary-border-color);
   }
   
   .about__description {
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 1.5rem;
+    width: 15rem;
+    font-size: 1rem;
+    
   }
   
   .about__icons {
@@ -436,6 +474,7 @@ footer p{
   .about__content2 .col1 .row2 {
     display: flex;
     flex-direction: column;
+    
     gap: .5rem; 
 }
 
@@ -521,13 +560,30 @@ footer p{
 }
 
 @media (min-width: 768px){
+    html[data-theme="light"] .header__toggle{
+filter: none;
+}
     .header{
         position: fixed;
         border-bottom: 1px solid var(--primary-border-color);
         padding: 1rem 6rem;
-        background: var(--primary-bg-color);
+        background: var(--header-bg-color);
     }
-
+    b{
+    font-weight: 300;
+    font-size: 8rem;
+    
+}
+      .about__photo {
+    width: 35rem;
+    margin-left: 18rem;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+    height: 35rem;
+    border-radius: 200rem;
+    border: 1px solid var(--primary-border-color);
+  }
     .nav--mobile{
         display: none;
     }
@@ -554,9 +610,6 @@ footer p{
         font-size: 3rem;
     }
 
-    main{
-        padding: 8rem 6rem 4rem 6rem;
-    }
 
     .contact {
         padding: 6rem;
@@ -583,10 +636,6 @@ footer p{
         letter-spacing: 0.4rem;
     }
 
-    .about{
-        padding: 4rem 6rem 4rem 6rem;
-    }
-
     footer{
         margin: 0;
     }
@@ -608,6 +657,7 @@ footer p{
   
     .about {
       gap: 5rem;
+      
     }
   
     .about__content1, .about__content2 {
@@ -616,10 +666,22 @@ footer p{
       justify-content: flex-start;
       align-items: flex-start;
       gap: 4rem;
+      width: 90rem;
     }
+    .about__description {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    width: 45rem;
+    margin-left: 5rem;
+  }
   
     .about__description h2 {
       text-align: left;
+      font-size: 6rem;
+
     }
   
     .description__buttons {
@@ -644,6 +706,7 @@ footer p{
     h3 {
         font-size: 2.5rem;
     }
+    
     .skills{
         flex-direction: row;
         justify-content: space-between;
@@ -683,7 +746,7 @@ footer p{
     }
 
     p, span, li {
-        font-size: 1.15rem;
+        font-size: 1.5rem;
       }
     
     .card__buttons .btn,
@@ -692,45 +755,6 @@ footer p{
     }
 }
 
-@media (min-width: 1500px){
-    .header{
-        padding: 1rem 15rem;
-    }
-
-    main{
-        padding: 13rem 15rem 2rem;
-        padding-bottom: 6.25rem;
-    }
-
-    h1{
-        font-size: 6.25rem;
-    }
-    h2{
-        font-size: 5rem;
-    }
-    h3 {
-        font-size: 3.25rem;
-      }
-    p{
-        font-size: 1.5rem;
-    }
-    .skills__itens{
-        width: 8.125rem;
-        height: 8.125rem;
-    }
-    .skills__logo {
-        height: 4rem;
-    }
-    .skills{
-        padding: 4rem 12rem 4rem;
-    }
-    .projects{
-        padding: 7.5rem 15rem 4rem;
-    }
-    .about{
-        padding: 7.5rem 15rem 4rem;
-    }
-}
 .previa{
     font-size: 40px;
     color: white;

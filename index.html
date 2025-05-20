@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="dark">
+<html lang="pt-br" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -23,8 +27,8 @@
         <nav class="header__nav">
             <ul class="menu menu--principal">
                 <li class="menu__item"><a class="menu__link active" href="#home"><span class="menu__text">HOME</span></a></li>
-                <li class="menu__item"><a class="menu__link" href="#projetos"><span class="menu__text">PROJETOS</span></a></li>
                 <li class="menu__item"><a class="menu__link" href="#sobre"><span class="menu__text">SOBRE</span></a></li>
+                <li class="menu__item"><a class="menu__link" href="#destaque"><span class="menu__text">Destaque</span></a></li>
                 <li class="menu__item"><a class="menu__link" href="#contato"><span class="menu__text">CONTATO</span></a></li>
             </ul>
         </nav>
@@ -39,166 +43,16 @@
     <nav class="nav--mobile">
         <ul class="menu menu--mobile">
             <li class="menu__item"><a class="menu__link active" href="#home"><i class="menu__icon bi bi-house-door"></i><span class="menu__text">HOME</span></a></li>
-            <li class="menu__item"><a class="menu__link" href="#projetos"><i class="menu__icon bi bi-window-stack"></i><span class="menu__text">PROJETOS</span></a></li>
+            <li class="menu__item"><a class="menu__link" href="#destaque"><i class="menu__icon bi bi-window-stack"></i><span class="menu__text">PROJETOS</span></a></li>
             <li class="menu__item"><a class="menu__link" href="#sobre"><i class="menu__icon bi bi-person"></i><span class="menu__text">SOBRE</span></a></li>
             <li class="menu__item"><a class="menu__link" href="#contato"><i class="menu__icon bi bi-envelope"></i><span class="menu__text">CONTATO</span></a></li>
         </ul>
     </nav>
     <main id="home">
-        <div class="main__content1">
-            
-            
-            <div class="swiper">
-                <span class="previa">PRÉVIAS</span>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="project-img">
-                            <img src="./assets/img/projects/ragnarok.PNG" alt="Projeto 1">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="project-img">
-                            <img src="./assets/img/projects/rardware.jpeg" alt="Projeto 2">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="project-img">
-                            <img src="./assets/img/projects/SharkAnimes.png" alt="Projeto 3">
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <p>João Vitor de Moura, São José dos Campos, Desenvolvedor front-end</p>
-            <ul class="menu menu--social">
-                <li><a class="menu__icon menu__link" href="https://github.com/JoaooMoura" target="_blank"><i class="bi bi-github"></i></a></li>
-                <li><a class="menu__icon menu__link" href="https://www.linkedin.com/in/jo%C3%A3o-moura-8010ab332/" target="_blank"><i class="bi bi-linkedin"></i></a></li>
-            </ul>
-            <a href="#projetos">
-                <button src class="btn btn--primary">
-                    <span>Ver projetos</span>
-                    <i class="bi bi-arrow-down-right"></i>
-                </button>
-            </a>
-        </div>
-    </main>
-        <section class="skills">
-            <h2>Conhecimento nas principais tecnologias do mercado</h2>
-            <ul class="skills__list">
-                
-                <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/react.png" alt="Logo React Native"></li>
-                <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/JS.png" alt="Logo JS"></li>
-                <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/HTML.png" alt="Logo HTML"></li>
-                <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/CSS.png" alt="Logo CSS"></li>
-            </ul>
-        </section>
-        <section id="projetos" class="projects">
-            <h2>Projetos</h2>
-            <div class="projects__container">
-                <div class="projects__card">
-                    <img class="card__cover" src="assets/img/projects/ragnarok.PNG" alt="">
-                    <div class="card__body">
-                        <h3 class="card__title">Ragnarok Store</h3>
-                        <p class="card__description">Este projeto é um site dedicado a uma loja de produtos esportivos. Com várias sessões e com pop-ups para a consulta de produtos.</p>
-                        <ul class="card__list">
-                            <li class="card__item">Página Inicial;</li>
-                            <li class="card__item">Página de Produtos com pop-ups interativos;</li>
-                            <li class="card__item">Página sobre a loja.</li>
-                            <li class="card__item">Página dos contatos da loja.</li>
-                        </ul>
-                        <ul class="skills__list">
-                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/JS.png" alt=""></li>
-                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/HTML.png" alt=""></li>
-                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/CSS.png" alt=""></li>
-                        </ul>
-                        <div class="card__buttons">
-                            <a href="/assets/projects/Ragnarok ofc/index.html" target="_blank">
-                                <button class="btn btn--primary">
-                                    <span>Prévia</span>
-                                    <i class="bi bi-arrow-up-right"></i>
-                                </button>
-                            </a>
-                            <a href="https://github.com/JoaooMoura/Projeto-PW---Ragnarok-Store" target="_blank">
-                                <button class="btn">
-                                    <span>Repositório</span>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="projects__card card--reverse">
-                    <img class="card__coverR" src="assets/img/projects/rardware.jpeg" alt="">
-                    <div class="card__body">
-                        <h3 class="card__title">RArdware</h3>
-                        <p class="card__description">Esse é um projeto que foi realizado como Trabalho de Conclusão de Curso. É um aplicativo feito com react native, expo e unity. Nele há uma interface interativa e intuitiva, junto de um ambiente de realidade aumentada que ao apontar a câmera para um qrcode especifico aparece um modelo 3d de um computador. Função do aplicativo é auxiliar nas aulas de componentes de hardwares, deixando as aulas mais dinâmicas e evitando possíveis acidentes.</p>
-                        <ul class="card__list">
-                            <li class="card__item">Elementos intuitivos e interativos;</li>
-                            <li class="card__item">Ambiente de Realidade Aumentada;</li>
-                            <li class="card__item">Gerador de QRCode.</li>
-                        </ul>
-                        <ul class="skills__list">
-                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/JS.png" alt=""></li>
-                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/react.png" alt=""></li>
-                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/unity.png" alt=""></li>
-                        </ul>
-                        <div class="card__buttons">
-                            <a href=https://youtube.com/shorts/3gZU5ezltcM?feature=share" target="_blank">
-                                <button class="btn btn--primary">
-                                    <span>Prévia</span>
-                                    <i class="bi bi-arrow-up-right"></i>
-                                </button>
-                            </a>
-                            <a href="https://github.com/JoaooMoura/TCC---RArdware" target="_blank">
-                                <button class="btn">
-                                    <span>Repositório</span>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="projects__card">
-                    <img class="card__cover" src="assets/img/projects/SharkAnimes.png" alt="">
-                    <div class="card__body">
-                        <h3 class="card__title">Shark Animes</h3>
-                        <p class="card__description">Este é um projeto web para assistir epsódios/trailes de animes, desenvolvido para demonstrar funcionalidades práticas de HTML e CSS.</p>
-                        <ul class="card__list">
-                            <li class="card__item">Popups interativos com animação de hover.</li>
-                            <li class="card__item">Links externos.</li>
-                            <li class="card__item">Fontes externas.</li>
-                        </ul>
-                        <ul class="skills__list">
-                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/HTML.png" alt=""></li>
-                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/CSS.png" alt=""></li>
-                        </ul>
-                        <div class="card__buttons">
-                            <a href="/assets/projects/Anime/home.html"target="_blank">
-                                <button class="btn btn--primary">
-
-                                    <span>Prévia</span>
-                                    <i class="bi bi-arrow-up-right"></i>
-                                </button>
-                            </a>
-                            <a href="https://github.com/JoaooMoura/SharkAnimes_Jo-oMoura" target="_blank">
-                                <button class="btn">
-                                    <span>Repositório</span>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <a href="https://github.com/JoaooMoura" target="_blank">
-                    <button class="btn btn--primary">
-                        <span>Ver Todos os projetos</span>
-                        <i class="bi bi-arrow-up-right"></i>
-                    </button>
-                </a>
-            </div>
-        </section>
+        <h1><b>Programando o futuro, uma linha por vez.</b></h1>
         <section id="sobre" class="about">
             <div class="about__content1">
-                <img src="assets/img/about/foto.png" alt="" class="about__photo">
+                
                 <div class="about__description">
                     <h2>Sobre mim</h2>
                     <p>Me chamo João Vitor de Moura, sou um desenvolvedor front-end júnior com foco em React Native, HTML, CSS e JavaScript. Além do front-end, também possuo habilidades em desenvolvimento back-end, buscando me tornar um profissional completo.
@@ -207,7 +61,7 @@
                        </p>
                     <div class="about__icons">
                         <i class="bi bi-translate"></i>
-                        <span>Inglês: Intermediário</span>
+                        <span>Inglês: Básico</span>
                     </div>
                     <div class="description__buttons">
                         <a href="https://www.linkedin.com/in/jo%C3%A3o-moura-8010ab332/" target="_blank">
@@ -222,7 +76,9 @@
                             </button>
                         </a>
                     </div>
+                    
                 </div>
+                <img src="assets/img/about/DSCF8535.JPG" alt="" class="about__photo">
             </div>
             <div class="about__content2">
                 <div class="col1">
@@ -312,6 +168,117 @@
                 
             </div>
         </section>
+    </main>
+
+        <section class="skills">
+            <h2>Conhecimento nas principais tecnologias do mercado</h2>
+            <ul class="skills__list">
+                
+                <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/react.png" alt="Logo React Native"></li>
+                <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/JS.png" alt="Logo JS"></li>
+                <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/HTML.png" alt="Logo HTML"></li>
+                <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/CSS.png" alt="Logo CSS"></li>
+            </ul>
+        </section>
+        <section id="destaque" class="projects">
+            <h2>Projetos</h2>
+            <div class="projects__container">
+                <div class="projects__card">
+                    <img class="card__cover" src="assets/img/projects/ragnarok.PNG" alt="">
+                    <div class="card__body">
+                        <h3 class="card__title">Ragnarok Store</h3>
+                        <p class="card__description">Este projeto é um site dedicado a uma loja de produtos esportivos. Com várias sessões e com pop-ups para a consulta de produtos.</p>
+                        <ul class="card__list">
+                            <li class="card__item">Página Inicial;</li>
+                            <li class="card__item">Página de Produtos com pop-ups interativos;</li>
+                            <li class="card__item">Página sobre a loja.</li>
+                            <li class="card__item">Página dos contatos da loja.</li>
+                        </ul>
+                        <ul class="skills__list">
+                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/JS.png" alt=""></li>
+                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/HTML.png" alt=""></li>
+                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/CSS.png" alt=""></li>
+                        </ul>
+                        <div class="card__buttons">
+                            <a href="/assets/projects/Ragnarok ofc/index.html" target="_blank">
+                                <button class="btn btn--primary">
+                                    <span>Prévia</span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </button>
+                            </a>
+                            <a href="https://github.com/JoaooMoura/Projeto-PW---Ragnarok-Store" target="_blank">
+                                <button class="btn">
+                                    <span>Repositório</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__card card--reverse">
+                    <img class="card__coverR" src="assets/img/projects/rardware.jpeg" alt="">
+                    <div class="card__body">
+                        <h3 class="card__title">RArdware</h3>
+                        <p class="card__description">Esse é um projeto que foi realizado como Trabalho de Conclusão de Curso. É um aplicativo feito com react native, expo e unity. Nele há uma interface interativa e intuitiva, junto de um ambiente de realidade aumentada que ao apontar a câmera para um qrcode especifico aparece um modelo 3d de um computador. Função do aplicativo é auxiliar nas aulas de componentes de hardwares, deixando as aulas mais dinâmicas e evitando possíveis acidentes.</p>
+                        <ul class="card__list">
+                            <li class="card__item">Elementos intuitivos e interativos;</li>
+                            <li class="card__item">Ambiente de Realidade Aumentada;</li>
+                            <li class="card__item">Gerador de QRCode.</li>
+                        </ul>
+                        <ul class="skills__list">
+                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/JS.png" alt=""></li>
+                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/react.png" alt=""></li>
+                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/unity.png" alt=""></li>
+                        </ul>
+                        <div class="card__buttons">
+                            <a href=https://youtube.com/shorts/3gZU5ezltcM?feature=share" target="_blank">
+                                <button class="btn btn--primary">
+                                    <span>Prévia</span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </button>
+                            </a>
+                            <a href="https://github.com/JoaooMoura/TCC---RArdware" target="_blank">
+                                <button class="btn">
+                                    <span>Repositório</span>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__card">
+                    <img class="card__cover" src="assets/img/projects/api.jpg" alt="">
+                    <div class="card__body">
+                        <h3 class="card__title">API - 1º Semestre</h3>
+                        <p class="card__description">Este é um projeto web para um trabalho na faculdade que ocorre todo semestre. O projeto foi desenvolvido utilizando a metodologia SCRUM. Tudo começou com um kick-off onde o cliente falou o problema e qual a solução que ele queria, o problema era a dificuldade para visualizar e analisar os dados de exportação e importação do estado de São Paulo. A solução foi um site feito com html, css e flask para a visualização e filtragem desses dados. O projeto foi dividido em 3 sprints. Minha participação em todas as sprints foi o desenvolvimento do front-end, onde eu montei a estrutura, o posicionamento e uma projeção de como ficariam os gráficos.</p>
+                        <ul class="card__list">
+                            <li class="card__item">Estrutura organizada com tags semânticas<li>
+                            <li class="card__item">Botões intuitivos e práticos</li>
+                            <li class="card__item">Visualização e Filtragem em gráficos interativos</li>
+                        </ul>
+                        <ul class="skills__list">
+                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/HTML.png" alt=""></li>
+                            <li class="skills__itens"><img class="skills__logo" src="./assets/img/technologies/CSS.png" alt=""></li>
+                        </ul>
+                        <div class="card__buttons">
+                            <a href="https://github.com/Team-Chronos/API-DSM-1SEMESTRE-2025"target="_blank">
+                                <button class="btn btn--primary">
+
+                                    <span>Repositório</span>
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </button>
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/JoaooMoura" target="_blank">
+                    <button class="btn btn--primary">
+                        <span>Ver Todos os projetos</span>
+                        <i class="bi bi-arrow-up-right"></i>
+                    </button>
+                </a>
+            </div>
+        </section>
+        
         <section id="contato" class="contact">
             <h2>Contate-me</h2>
             <p>Estou disponível para serviços e novas conexões. Contate-me via 
