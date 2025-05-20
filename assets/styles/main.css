@@ -438,6 +438,7 @@ main{
     pointer-events: none;
     height: 15rem;
     border-radius: 200rem;
+    margin-left: 2.5rem;
     border: 1px solid var(--primary-border-color);
   }
   
@@ -447,11 +448,12 @@ main{
     flex-direction: column;
     justify-content: flex-start;
     gap: 1.5rem;
-    width: 15rem;
-    font-size: 1rem;
-    
+    width: 20rem;
   }
-  
+.about__description p{
+   font-size: 1rem;
+   
+  }
   .about__icons {
     display: flex;
     align-items: center;
