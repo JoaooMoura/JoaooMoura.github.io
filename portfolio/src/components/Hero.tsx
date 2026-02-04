@@ -78,7 +78,7 @@ export default function Hero() {
                 GitHub
               </a>
               <a 
-                href="https://www.linkedin.com/in/joaomoura-dev/" 
+                href="https://www.linkedin.com/in/joaoomoura/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-600 to-purple-700 rounded-2xl text-white hover:from-blue-600 hover:via-purple-700 hover:to-purple-800 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-purple-500/50 flex items-center gap-3 text-lg font-medium border border-purple-400/30"
