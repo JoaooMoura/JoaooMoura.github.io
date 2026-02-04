@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-[120px] animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-[120px] animate-pulse" />
       
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="container mx-auto max-w-7xl relative z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
           <motion.div
@@ -93,11 +93,10 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative flex items-center justify-center lg:justify-end"
+            className="relative flex items-center justify-center lg:justify-end mb-20 lg:mb-0"
           >
            
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-      
               <motion.div
                 animate={{ 
                   scale: [1, 1.2, 1],
@@ -157,15 +156,17 @@ export default function Hero() {
               <img 
                 src="/fotoeu.png" 
                 alt="João Moura"
-                className="w-auto h-[500px] md:h-[600px] object-contain object-center drop-shadow-[0_0_30px_rgba(168,85,247,0.6)] [mask-image:linear-gradient(to_bottom,black_70%,transparent)]"
+                className="w-auto h-[400px] sm:h-[500px] md:h-[600px] object-contain object-center drop-shadow-[0_0_30px_rgba(168,85,247,0.6)] [mask-image:linear-gradient(to_bottom,black_70%,transparent)]"
               />
             </motion.div>
           </motion.div>
         </div>
+      </div>
 
+      <div className="absolute bottom-10 left-0 right-0 w-full flex justify-center">
         <motion.button
           onClick={scrollToProjects}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-400 hover:text-white transition-colors"
+          className="text-gray-400 hover:text-white transition-colors"
           animate={{ y: [0, 12, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
