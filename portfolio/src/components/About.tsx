@@ -57,7 +57,7 @@ export default function About() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          
+
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -69,13 +69,13 @@ export default function About() {
 
               <div className="space-y-4">
                 <p className="text-gray-300 leading-relaxed">
-                  Desenvolvedor Front-end Júnior e Mobile com foco em <span className="text-blue-400 font-semibold">React Native</span>, <span className="text-blue-400 font-semibold">ReactJS</span> e ecossistema JavaScript.
+                  <span className="text-blue-400 font-semibold">Desenvolvedor Full Stack</span> apaixonado por transformar lógica em experiências digitais fluidas. Atualmente, concilio minha atuação como Jovem Aprendiz Administrativo na <span className="text-white font-medium">Braga Turismo</span> com a graduação na <span className="text-purple-400 font-semibold">FATEC</span>.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Experiência em liderança de equipes e metodologias ágeis adquirida durante o desenvolvimento de TCCs e projetos acadêmicos. Habilidade comprovada em gerenciamento de projetos complexos e coordenação de times de desenvolvimento.
+                  Com foco estratégico no ecossistema <span className="text-blue-400 font-semibold">TypeScript</span>, utilizo React para interfaces modernas e Node.js para back-ends robustos. Minha versatilidade me permite transitar com agilidade entre stacks, dominando desde <span className="text-emerald-400">C# e Python</span> até o refinamento essencial de arquiteturas modernas.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Atualmente cursando <span className="text-purple-400 font-semibold">Desenvolvimento de Software Multiplataforma</span>, aprimorando habilidades em arquitetura de sistemas, cloud computing e DevOps.
+                  Busco constantemente resolver enigmas tecnológicos e otimizar processos. Minha trajetória é marcada pela sede de aprendizado e pela habilidade de colaborar em equipes ágeis para entregar produtos que realmente fazem a diferença.
                 </p>
               </div>
 
@@ -122,11 +122,10 @@ export default function About() {
                       <span className="text-sm font-semibold text-blue-400 bg-blue-500/20 px-3 py-1 rounded-full border border-blue-500/30">
                         {edu.period}
                       </span>
-                      <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
-                        edu.status === 'Em andamento' 
-                          ? 'text-green-400 bg-green-500/20 border border-green-500/30' 
+                      <span className={`text-xs font-semibold px-3 py-1 rounded-full ${edu.status === 'Em andamento'
+                          ? 'text-green-400 bg-green-500/20 border border-green-500/30'
                           : 'text-gray-400 bg-gray-500/20 border border-gray-500/30'
-                      }`}>
+                        }`}>
                         {edu.status}
                       </span>
                     </div>
