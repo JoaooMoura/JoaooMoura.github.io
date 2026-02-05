@@ -82,7 +82,7 @@ export default function About() {
               <div className="pt-6">
                 <a
                   href="/assets/pdf/Currículo Front-end João.pdf"
-                  download="Curriculo-Joao-Moura.pdf"
+                  download="curriculo.pdf"
                   rel="noopener noreferrer"
                   className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-600 to-purple-700 rounded-2xl text-white font-semibold hover:from-blue-600 hover:via-purple-700 hover:to-purple-800 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/60 flex items-center justify-center gap-3 border border-purple-400/30"
                 >
