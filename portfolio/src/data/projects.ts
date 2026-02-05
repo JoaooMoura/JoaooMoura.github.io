@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description: 'Plataforma web completa para gerenciamento e monitoramento de hardware em tempo real. Sistema desenvolvido com foco em performance e escalabilidade, permitindo análise detalhada de componentes e histórico de desempenho.',
     techs: ['React', 'Node.js', 'MySQL', 'Express'],
     imageUrl: '/projects/rardware.jpeg',
-    deployUrl: 'https://youtu.be/qN67BFehoaQ',
+    deployUrl: 'https://youtube.com/shorts/3gZU5ezltcM',
     repoUrl: 'https://github.com/JoaooMoura/TCC---RArdware',
     featured: true,
   },
