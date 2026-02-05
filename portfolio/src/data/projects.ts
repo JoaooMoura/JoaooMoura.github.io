@@ -36,8 +36,8 @@ export const projects: Project[] = [
     description: 'API REST robusta desenvolvida como projeto integrador acadêmico. Sistema completo de gerenciamento com autenticação, validação de dados e documentação técnica. Implementa conceitos de arquitetura limpa e padrões de projeto.',
     techs: ['Node.js', 'Express', 'PostgreSQL', 'Prisma'],
     imageUrl: '/projects/api.jpg',
-    deployUrl: 'https://github.com/Team-Chronos/API-DSM1SEM2024-1',
-    repoUrl: 'https://github.com/Team-Chronos/API-DSM1SEM2024-1',
+    deployUrl: 'https://github.com/Team-Chronos/API-DSM-1SEMESTRE-2025',
+    repoUrl: 'https://github.com/Team-Chronos/API-DSM-1SEMESTRE-2025',
     featured: true,
   },
   {
