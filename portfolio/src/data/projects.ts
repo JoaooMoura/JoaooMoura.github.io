@@ -12,7 +12,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'RArdware',
+    title: 'RArdware - Aplicativo Mobile com Realidade Aumentada',
     description: 'Plataforma web completa para gerenciamento e monitoramento de hardware em tempo real. Sistema desenvolvido com foco em performance e escalabilidade, permitindo análise detalhada de componentes e histórico de desempenho.',
     techs: ['React', 'Node.js', 'MySQL', 'Express'],
     imageUrl: '/projects/rardware.jpeg',
@@ -28,11 +28,11 @@ export const projects: Project[] = [
     imageUrl: '/projects/ragnarok.PNG',
     deployUrl: 'https://joaoomoura.github.io/ragnarok-store-web/',
     repoUrl: 'https://github.com/JoaooMoura/ragnarok-store-web',
-    featured: true,
+    featured: false,
   },
   {
     id: 3,
-    title: 'API 1º Semestre',
+    title: 'API 1º Semestre - Plataforma de Monitoramento de Importação e Exportação',
     description: 'API REST robusta desenvolvida como projeto integrador acadêmico. Sistema completo de gerenciamento com autenticação, validação de dados e documentação técnica. Implementa conceitos de arquitetura limpa e padrões de projeto.',
     techs: ['Node.js', 'Express', 'PostgreSQL', 'Prisma'],
     imageUrl: '/projects/api.jpg',
@@ -62,12 +62,12 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    title: 'AV3 - Avaliação Prática',
-    description: 'Projeto acadêmico avançado focado em conceitos de arquitetura de software, padrões de design e otimização de código. Implementação de funcionalidades complexas com ênfase em qualidade, manutenibilidade e documentação técnica.',
+    title: 'AV3 - Plataforma de Gestão e Performance de Aeronaves',
+    description: 'Plataforma full stack desenvolvida para gestão de aeronaves, peças e etapas de manutenção, com foco em controle operacional, acompanhamento técnico e análise de desempenho do sistema. A aplicação conta com dashboard interativo, geração de relatórios técnicos em PDF, autenticação com níveis de permissão e integração completa com banco de dados MySQL por meio do Prisma ORM, unindo front-end em React e back-end em Node.js/Express com TypeScript em uma solução moderna e estruturada',
     techs: ['JavaScript', 'React', 'Node.js', 'Git'],
     imageUrl: '/projects/AV3.png',
     deployUrl: 'https://av-3-six.vercel.app',
     repoUrl: 'https://github.com/JoaooMoura/AV3',
-    featured: false,
+    featured: true,
   },
 ];

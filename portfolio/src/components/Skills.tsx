@@ -4,7 +4,6 @@ import {
   SiCss3, 
   SiHtml5, 
   SiPython, 
-  SiPhp, 
   SiMysql, 
   SiPrisma,
   SiCanva,
@@ -14,8 +13,7 @@ import {
   SiGit,
   SiGithub
 } from 'react-icons/si';
-
-// Importando ícones alternativos (Tabler Icons) para evitar erros de versão
+import { FaJava } from "react-icons/fa";
 import { 
   TbBrandCSharp, 
   TbBrandVisualStudio, 
@@ -29,9 +27,9 @@ export default function Skills() {
     { name: 'HTML5', icon: SiHtml5, hoverColor: 'group-hover:text-orange-500' },
     { name: 'C#', icon: TbBrandCSharp, hoverColor: 'group-hover:text-purple-600' },
     { name: 'Python', icon: SiPython, hoverColor: 'group-hover:text-blue-400' },
-    { name: 'PHP', icon: SiPhp, hoverColor: 'group-hover:text-indigo-500' },
     { name: 'MySQL', icon: SiMysql, hoverColor: 'group-hover:text-blue-600' },
-    { name: 'Prisma', icon: SiPrisma, hoverColor: 'group-hover:text-teal-400' },
+    { name: 'Prisma', icon: SiPrisma, hoverColor: 'group-hover:text-teal-400', },
+    { name: 'Java', icon: FaJava, hoverColor: 'group-hover:text-teal-400', },
   ];
 
   const tools = [

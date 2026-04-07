@@ -36,7 +36,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-3xl md:text-4xl font-bold text-white"
             >
-              Desenvolvedor Full Stack
+              Desenvolvedor Full Stack em formação
             </motion.h2>
 
             <motion.h1
