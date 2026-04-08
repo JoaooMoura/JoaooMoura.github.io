@@ -53,11 +53,10 @@ export default function About() {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">Sobre Mim</h2>
-          <p className="text-gray-400 text-lg">Trajetória profissional, formação e certificações</p>
+          <p className="text-gray-400 text-lg">Formação, trajetória e certificações</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -69,13 +68,14 @@ export default function About() {
 
               <div className="space-y-4">
                 <p className="text-gray-300 leading-relaxed">
-                  <span className="text-blue-400 font-semibold">Desenvolvedor Full Stack</span> apaixonado por transformar lógica em experiências digitais fluidas. Atualmente, concilio minha atuação como Jovem Aprendiz Administrativo na <span className="text-white font-medium">Braga Turismo</span> com a graduação na <span className="text-purple-400 font-semibold">FATEC</span>.
+                  Sou <span className="text-blue-400 font-semibold">desenvolvedor full stack </span>em formação, atualmente cursando
+                  <span className="text-purple-400 font-semibold"> Desenvolvimento de Software Multiplataforma</span> na FATEC e formado como técnico em Desenvolvimento de Sistemas pela ETEC Profª Ilza Nascimento Pintus.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Com foco estratégico no ecossistema <span className="text-blue-400 font-semibold">TypeScript</span>, utilizo React para interfaces modernas e Node.js para back-ends robustos. Minha versatilidade me permite transitar com agilidade entre stacks, dominando desde <span className="text-emerald-400">C# e Python</span> até o refinamento essencial de arquiteturas modernas.
+                  Tenho maior afinidade com o ecossistema <span className="text-blue-400 font-semibold">JavaScript e TypeScript</span>, utilizando React no desenvolvimento de interfaces e Node.js na construção de aplicações e APIs. Também possuo contato com <span className="text-emerald-400 font-semibold">C#, Python, MySQL</span> e outras ferramentas que ampliam minha visão de desenvolvimento.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Busco constantemente resolver enigmas tecnológicos e otimizar processos. Minha trajetória é marcada pela sede de aprendizado e pela habilidade de colaborar em equipes ágeis para entregar produtos que realmente fazem a diferença.
+                  Busco oportunidades para aplicar meus conhecimentos em projetos reais, evoluir tecnicamente e contribuir com soluções bem estruturadas, funcionais e pensadas para o usuário.
                 </p>
               </div>
 
@@ -87,11 +87,12 @@ export default function About() {
                   className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-600 to-purple-700 rounded-2xl text-white font-semibold hover:from-blue-600 hover:via-purple-700 hover:to-purple-800 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/60 flex items-center justify-center gap-3 border border-purple-400/30"
                 >
                   <Download size={20} />
-                  Baixar Currículo
+                  Baixar currículo
                 </a>
               </div>
             </div>
           </motion.div>
+
           <motion.div
             variants={container}
             initial="hidden"
@@ -108,24 +109,23 @@ export default function About() {
 
             <div className="relative pl-8 border-l-2 border-white/20">
               {education.map((edu, index) => (
-                <motion.div
-                  key={index}
-                  variants={item}
-                  className="relative mb-10 last:mb-0"
-                >
+                <motion.div key={index} variants={item} className="relative mb-10 last:mb-0">
                   <div className="absolute -left-[37px] w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/50 border-4 border-slate-950">
                     <Calendar className="text-white" size={18} />
                   </div>
 
                   <div className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-2xl p-6 hover:bg-white/15 hover:border-white/30 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl shadow-[inset_0_0_30px_rgba(255,255,255,0.05)]">
-                    <div className="flex items-start justify-between mb-3">
+                    <div className="flex items-start justify-between mb-3 gap-3">
                       <span className="text-sm font-semibold text-blue-400 bg-blue-500/20 px-3 py-1 rounded-full border border-blue-500/30">
                         {edu.period}
                       </span>
-                      <span className={`text-xs font-semibold px-3 py-1 rounded-full ${edu.status === 'Em andamento'
-                          ? 'text-green-400 bg-green-500/20 border border-green-500/30'
-                          : 'text-gray-400 bg-gray-500/20 border border-gray-500/30'
-                        }`}>
+                      <span
+                        className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                          edu.status === 'Em andamento'
+                            ? 'text-green-400 bg-green-500/20 border border-green-500/30'
+                            : 'text-gray-400 bg-gray-500/20 border border-gray-500/30'
+                        }`}
+                      >
                         {edu.status}
                       </span>
                     </div>

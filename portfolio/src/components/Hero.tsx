@@ -59,7 +59,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-xl text-gray-300 leading-relaxed"
             >
-              Especializado em criar experiências digitais modernas e funcionais com React, Node.js e tecnologias de ponta.
+                Desenvolvo projetos acadêmicos e pessoais com React, TypeScript, Node.js e outras tecnologias do ecossistema web,
+              buscando unir visual moderno, código organizado e soluções funcionais.
             </motion.p>
 
             <motion.div
