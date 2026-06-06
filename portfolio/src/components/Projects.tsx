@@ -37,6 +37,7 @@ export default function Projects() {
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
+                className="h-full"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

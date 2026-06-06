@@ -27,7 +27,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="inline-flex items-center gap-2 px-4 py-2 backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-full shadow-lg"
             >
-              <span className="text-gray-300 text-sm font-medium">Olá, me chamo João Moura</span>
+              <span className="text-gray-300 text-sm font-medium">Olá, me chamo João Vitor de Moura</span>
             </motion.div>
 
             <motion.h2
@@ -59,8 +59,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-xl text-gray-300 leading-relaxed"
             >
-                Desenvolvo projetos acadêmicos e pessoais com React, TypeScript, Node.js e outras tecnologias do ecossistema web,
-              buscando unir visual moderno, código organizado e soluções funcionais.
+                Desenvolvo projetos acadêmicos e pessoais com React, TypeScript, Java, Spring Boot, Node.js e outras tecnologias do ecossistema web, buscando unir visual moderno, código organizado, APIs REST e soluções funcionais.
             </motion.p>
 
             <motion.div
@@ -156,7 +155,7 @@ export default function Hero() {
             >
               <img 
                 src="/fotoeu.png" 
-                alt="João Moura"
+                alt="João Vitor de Moura"
                 className="w-auto h-[400px] sm:h-[500px] md:h-[600px] object-contain object-center drop-shadow-[0_0_30px_rgba(168,85,247,0.6)] [mask-image:linear-gradient(to_bottom,black_70%,transparent)]"
               />
             </motion.div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { GraduationCap, Award, Download, Calendar } from 'lucide-react';
+import { GraduationCap, Award, Download, Calendar, ExternalLink, FileText, BriefcaseBusiness } from 'lucide-react';
 
 export default function About() {
   const education = [
@@ -20,9 +20,33 @@ export default function About() {
   ];
 
   const certificates = [
-    { name: 'Networking Essentials', issuer: 'Cisco', icon: Award },
-    { name: 'Introduction to Cybersecurity', issuer: 'Cisco', icon: Award },
-    { name: 'Cybersecurity Essentials', issuer: 'Cisco', icon: Award },
+    {
+      name: 'Networking Essentials',
+      issuer: 'Cisco Networking Academy',
+      year: 'Concluído em 04 jun. 2024',
+      credentialUrl: '/certificates/networking-essentials.pdf',
+      imageUrl: '/certificates/networking-essentials.png',
+      type: 'PDF',
+      icon: Award,
+    },
+    {
+      name: 'Introduction to Cybersecurity',
+      issuer: 'Cisco Networking Academy',
+      year: 'Concluído em 03 set. 2024',
+      credentialUrl: '/certificates/introduction-to-cybersecurity.pdf',
+      imageUrl: '/certificates/introduction-to-cybersecurity.png',
+      type: 'PDF',
+      icon: Award,
+    },
+    {
+      name: 'Fundamentos da Cibersegurança',
+      issuer: 'Cisco Networking Academy / ETEC Profª Ilza Nascimento Pintus',
+      year: 'Concluído em 29 nov. 2024',
+      credentialUrl: '/certificates/fundamentos-ciberseguranca.pdf',
+      imageUrl: '/certificates/fundamentos-ciberseguranca.png',
+      type: 'PDF',
+      icon: Award,
+    },
   ];
 
   const container = {
@@ -68,15 +92,36 @@ export default function About() {
 
               <div className="space-y-4">
                 <p className="text-gray-300 leading-relaxed">
-                  Sou <span className="text-blue-400 font-semibold">desenvolvedor full stack </span>em formação, atualmente cursando
+                  Sou <span className="text-blue-400 font-semibold">João Vitor de Moura</span>, desenvolvedor full stack em formação, atualmente cursando
                   <span className="text-purple-400 font-semibold"> Desenvolvimento de Software Multiplataforma</span> na FATEC e formado como técnico em Desenvolvimento de Sistemas pela ETEC Profª Ilza Nascimento Pintus.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Tenho maior afinidade com o ecossistema <span className="text-blue-400 font-semibold">JavaScript e TypeScript</span>, utilizando React no desenvolvimento de interfaces e Node.js na construção de aplicações e APIs. Também possuo contato com <span className="text-emerald-400 font-semibold">C#, Python, MySQL</span> e outras ferramentas que ampliam minha visão de desenvolvimento.
+                  Tenho maior afinidade com o ecossistema <span className="text-blue-400 font-semibold">JavaScript e TypeScript</span>, utilizando React no desenvolvimento de interfaces e Node.js na construção de aplicações e APIs. Também venho atuando com <span className="text-emerald-400 font-semibold">Java, Spring Boot, Python, MySQL, Docker e microsserviços</span>, principalmente nos projetos integradores da FATEC.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Busco oportunidades para aplicar meus conhecimentos em projetos reais, evoluir tecnicamente e contribuir com soluções bem estruturadas, funcionais e pensadas para o usuário.
+                  Além da formação técnica, também desenvolvo experiência profissional na área administrativa como
+                  <span className="text-cyan-400 font-semibold"> Jovem Aprendiz Administrativo na Braga Turismo</span>, onde atuo desde junho de 2025 com organização de documentos, manipulação de planilhas, acompanhamento de informações operacionais, apoio em demandas internas e comunicação entre setores. Essa vivência me ajuda a entender processos reais de uma empresa e a pensar em sistemas que resolvem problemas do dia a dia administrativo.
                 </p>
+                <p className="text-gray-300 leading-relaxed">
+                  Busco oportunidades de estágio para aplicar meus conhecimentos em projetos reais, evoluir tecnicamente e contribuir com soluções bem estruturadas, funcionais e pensadas para o usuário. Tenho interesse em desenvolvimento web, APIs REST, front-end, full stack, sistemas empresariais e soluções que conectem tecnologia com rotinas administrativas e operacionais.
+                </p>
+              </div>
+
+              <div className="mt-8 rounded-2xl border border-cyan-400/20 bg-cyan-500/10 p-6 shadow-lg shadow-cyan-500/10">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg">
+                    <BriefcaseBusiness className="text-white" size={22} />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-lg">Experiência administrativa</h4>
+                    <p className="text-cyan-200 text-sm">Braga Turismo · Jun/2025 - Atual</p>
+                  </div>
+                </div>
+                <ul className="space-y-2 text-sm text-gray-300 leading-relaxed">
+                  <li>• Organização de documentos e apoio em rotinas administrativas.</li>
+                  <li>• Manipulação de planilhas e acompanhamento de informações operacionais.</li>
+                  <li>• Comunicação entre setores, controle de demandas e atenção a detalhes.</li>
+                </ul>
               </div>
 
               <div className="pt-6">
@@ -156,20 +201,47 @@ export default function About() {
             {certificates.map((cert, index) => {
               const Icon = cert.icon;
               return (
-                <motion.div
-                  key={index}
+                <motion.article
+                  key={cert.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-2xl p-6 hover:bg-white/15 hover:border-white/30 hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-yellow-500/20 shadow-[inset_0_0_30px_rgba(255,255,255,0.05)] text-center group"
+                  className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-2xl overflow-hidden hover:bg-white/15 hover:border-white/30 hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-yellow-500/20 shadow-[inset_0_0_30px_rgba(255,255,255,0.05)] group"
                 >
-                  <div className="w-14 h-14 mx-auto mb-4 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                    <Icon className="text-white" size={28} />
+                  {cert.imageUrl ? (
+                    <a href={cert.credentialUrl} target="_blank" rel="noopener noreferrer" className="block h-40 bg-white/95 overflow-hidden">
+                      <img src={cert.imageUrl} alt={`Certificado ${cert.name}`} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+                    </a>
+                  ) : (
+                    <div className="h-40 bg-gradient-to-br from-yellow-500/20 via-orange-500/10 to-purple-500/20 flex items-center justify-center border-b border-white/10">
+                      <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-3xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+                        <Icon className="text-white" size={40} />
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="p-6">
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <h4 className="text-white font-semibold text-base leading-snug">{cert.name}</h4>
+                      <span className="shrink-0 text-[10px] uppercase tracking-wide text-yellow-300 bg-yellow-500/10 border border-yellow-500/30 px-2 py-1 rounded-full">
+                        {cert.type}
+                      </span>
+                    </div>
+                    <p className="text-sm text-gray-400">{cert.issuer}</p>
+                    <p className="text-xs text-gray-500 mt-1">{cert.year}</p>
+
+                    <a
+                      href={cert.credentialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-yellow-300 hover:text-yellow-200 transition-colors"
+                    >
+                      {cert.type === 'PDF' ? <FileText size={16} /> : <ExternalLink size={16} />}
+                      Ver credencial
+                    </a>
                   </div>
-                  <h4 className="text-white font-semibold mb-2 text-sm leading-snug">{cert.name}</h4>
-                  <p className="text-xs text-gray-400">{cert.issuer}</p>
-                </motion.div>
+                </motion.article>
               );
             })}
           </div>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#07111f"/><stop offset=".45" stop-color="#0f766e"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient>
+    <linearGradient id="l" x1="0" x2="1"><stop stop-color="#67e8f9"/><stop offset="1" stop-color="#818cf8"/></linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#g)"/>
+  <path d="M0 540 C180 480 320 620 500 555 C720 475 830 590 1200 505 L1200 750 L0 750 Z" fill="#020617" opacity=".48"/>
+  <rect x="100" y="110" width="1000" height="530" rx="46" fill="#020617" opacity=".72" stroke="#ffffff" stroke-opacity=".18"/>
+  <text x="150" y="180" fill="#f8fafc" font-family="Inter, Arial" font-size="54" font-weight="800">Atlantis</text>
+  <text x="150" y="230" fill="#a5f3fc" font-family="Inter, Arial" font-size="28" font-weight="600">AV3/AV4 • Técnicas de Programação II</text>
+  <rect x="155" y="310" width="410" height="205" rx="30" fill="#0f172a" stroke="#67e8f9" stroke-opacity=".42"/>
+  <rect x="635" y="310" width="410" height="205" rx="30" fill="#0f172a" stroke="#818cf8" stroke-opacity=".42"/>
+  <text x="205" y="380" fill="#ffffff" font-family="Inter, Arial" font-size="30" font-weight="700">Back-end CLI</text>
+  <text x="685" y="380" fill="#ffffff" font-family="Inter, Arial" font-size="30" font-weight="700">Front-end SPA</text>
+  <text x="205" y="435" fill="#cbd5e1" font-family="Inter, Arial" font-size="22">TypeScript • Domínio</text>
+  <text x="685" y="435" fill="#cbd5e1" font-family="Inter, Arial" font-size="22">React • Componentes</text>
+  <circle cx="600" cy="410" r="34" fill="url(#l)" opacity=".9"/>
+</svg>

@@ -1,86 +1,115 @@
-import React from 'react';
-import {
-  SiJavascript,
-  SiCss3,
-  SiHtml5,
-  SiPython,
-  SiMysql,
-  SiPrisma,
-  SiCanva,
-  SiAndroidstudio,
-  SiUnity,
-  SiFigma,
-  SiGit,
-  SiGithub,
-} from 'react-icons/si';
-import { FaJava } from 'react-icons/fa';
-import { TbBrandCSharp, TbBrandVisualStudio, TbBrandVscode } from 'react-icons/tb';
+import { motion } from 'framer-motion';
+import { Code2, Database, Wrench, Users, MessageCircle, ClipboardCheck, Lightbulb, Target, BriefcaseBusiness } from 'lucide-react';
+
+const hardSkills = [
+  {
+    title: 'Front-end',
+    icon: Code2,
+    items: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React', 'React Native', 'Vite', 'Tailwind CSS'],
+  },
+  {
+    title: 'Back-end e APIs',
+    icon: Code2,
+    items: ['Node.js', 'Express', 'Java', 'Spring Boot', 'Python', 'Flask', 'APIs REST', 'Microsserviços'],
+  },
+  {
+    title: 'Banco de dados',
+    icon: Database,
+    items: ['MySQL', 'MariaDB', 'Prisma ORM', 'Modelagem relacional', 'Consultas SQL'],
+  },
+  {
+    title: 'Ferramentas e plataformas',
+    icon: Wrench,
+    items: ['Git', 'GitHub', 'Docker', 'VS Code', 'Figma', 'Canva', 'Unity', 'Vuforia', 'Firebase'],
+  },
+  {
+    title: 'Rotinas administrativas',
+    icon: BriefcaseBusiness,
+    items: ['Planilhas', 'Organização de documentos', 'Controle de informações', 'Acompanhamento operacional', 'Comunicação entre setores'],
+  },
+];
+
+const softSkills = [
+  {
+    title: 'Trabalho em equipe',
+    description: 'Experiência em projetos acadêmicos com divisão de tarefas, sprints, versionamento e entregas em grupo.',
+    icon: Users,
+  },
+  {
+    title: 'Comunicação',
+    description: 'Prática em apresentações de sprint, alinhamento de demandas e explicação de funcionalidades desenvolvidas.',
+    icon: MessageCircle,
+  },
+  {
+    title: 'Organização',
+    description: 'Acompanhamento de tarefas, documentos, planilhas, rotinas administrativas e atenção a detalhes no trabalho e nos projetos.',
+    icon: ClipboardCheck,
+  },
+  {
+    title: 'Resolução de problemas',
+    description: 'Atuação em correções de bugs, integração entre módulos, regras de negócio e melhorias de usabilidade.',
+    icon: Lightbulb,
+  },
+  {
+    title: 'Aprendizado contínuo',
+    description: 'Busca constante por evolução técnica em front-end, back-end, banco de dados, microsserviços e ferramentas de desenvolvimento.',
+    icon: Target,
+  },
+];
 
 export default function Skills() {
-  const technologies = [
-    { name: 'JavaScript', icon: SiJavascript, hoverColor: 'group-hover:text-yellow-400' },
-    { name: 'CSS3', icon: SiCss3, hoverColor: 'group-hover:text-blue-500' },
-    { name: 'HTML5', icon: SiHtml5, hoverColor: 'group-hover:text-orange-500' },
-    { name: 'C#', icon: TbBrandCSharp, hoverColor: 'group-hover:text-purple-600' },
-    { name: 'Python', icon: SiPython, hoverColor: 'group-hover:text-blue-400' },
-    { name: 'MySQL', icon: SiMysql, hoverColor: 'group-hover:text-blue-600' },
-    { name: 'Prisma', icon: SiPrisma, hoverColor: 'group-hover:text-teal-400' },
-    { name: 'Java', icon: FaJava, hoverColor: 'group-hover:text-teal-400' },
-  ];
-
-  const tools = [
-    { name: 'Canva', icon: SiCanva, hoverColor: 'group-hover:text-cyan-400' },
-    { name: 'VS Code', icon: TbBrandVscode, hoverColor: 'group-hover:text-blue-500' },
-    { name: 'Visual Studio', icon: TbBrandVisualStudio, hoverColor: 'group-hover:text-purple-700' },
-    { name: 'Android Studio', icon: SiAndroidstudio, hoverColor: 'group-hover:text-green-500' },
-    { name: 'Unity', icon: SiUnity, hoverColor: 'group-hover:text-gray-300' },
-    { name: 'Figma', icon: SiFigma, hoverColor: 'group-hover:text-pink-500' },
-    { name: 'Git', icon: SiGit, hoverColor: 'group-hover:text-orange-600' },
-    { name: 'GitHub', icon: SiGithub, hoverColor: 'group-hover:text-white' },
-  ];
-
   return (
     <section id="skills" className="py-32 px-6 border-t border-white/10 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 via-transparent to-blue-900/10" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[150px]" />
 
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-20"
+        >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">Habilidades</h2>
-          <p className="text-gray-400 text-lg">Tecnologias e ferramentas que utilizo nos meus projetos</p>
-        </div>
+          <p className="text-gray-400 text-lg">Competências técnicas e comportamentais desenvolvidas nos meus projetos</p>
+        </motion.div>
 
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white mb-10 text-center flex items-center justify-center gap-3">
             <span className="w-2 h-8 bg-purple-500 rounded-full inline-block"></span>
-            Tecnologias
+            Hard Skills
           </h3>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6">
-            {technologies.map((skill) => {
-              const Icon = skill.icon;
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {hardSkills.map((group, index) => {
+              const Icon = group.icon;
               return (
-                <div key={skill.name} className="group relative">
-                  <div
-                    className="
-                    backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-                    border border-white/20 rounded-3xl p-6
-                    hover:bg-white/15 hover:border-white/30 hover:-translate-y-2
-                    transition-all duration-300
-                    shadow-xl hover:shadow-2xl hover:shadow-purple-500/10
-                    shadow-[inset_0_0_30px_rgba(255,255,255,0.05)]
-                    flex items-center justify-center aspect-square cursor-pointer
-                  "
-                  >
-                    <Icon className={`text-6xl text-gray-400 ${skill.hoverColor} transition-colors duration-300`} />
+                <motion.article
+                  key={group.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-purple-500/10 hover:border-white/30 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                      <Icon className="text-white" size={24} />
+                    </div>
+                    <h4 className="text-2xl font-bold text-white">{group.title}</h4>
                   </div>
 
-                  <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
-                    <div className="backdrop-blur-md bg-black/80 border border-white/10 rounded-xl px-4 py-2 whitespace-nowrap shadow-lg">
-                      <p className="text-white text-sm font-medium">{skill.name}</p>
-                    </div>
+                  <div className="flex flex-wrap gap-3">
+                    {group.items.map((item) => (
+                      <span
+                        key={item}
+                        className="px-4 py-2 rounded-full text-sm font-semibold text-white bg-white/10 border border-white/20 hover:bg-white/15 transition-colors"
+                      >
+                        {item}
+                      </span>
+                    ))}
                   </div>
-                </div>
+                </motion.article>
               );
             })}
           </div>
@@ -89,34 +118,25 @@ export default function Skills() {
         <div>
           <h3 className="text-3xl font-bold text-white mb-10 text-center flex items-center justify-center gap-3">
             <span className="w-2 h-8 bg-blue-500 rounded-full inline-block"></span>
-            Ferramentas
+            Soft Skills
           </h3>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-6">
-            {tools.map((skill) => {
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {softSkills.map((skill, index) => {
               const Icon = skill.icon;
               return (
-                <div key={skill.name} className="group relative">
-                  <div
-                    className="
-                    backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5
-                    border border-white/20 rounded-3xl p-6
-                    hover:bg-white/15 hover:border-white/30 hover:-translate-y-2
-                    transition-all duration-300
-                    shadow-xl hover:shadow-2xl hover:shadow-blue-500/10
-                    shadow-[inset_0_0_30px_rgba(255,255,255,0.05)]
-                    flex items-center justify-center aspect-square cursor-pointer
-                  "
-                  >
-                    <Icon className={`text-6xl text-gray-400 ${skill.hoverColor} transition-colors duration-300`} />
-                  </div>
-
-                  <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-20">
-                    <div className="backdrop-blur-md bg-black/80 border border-white/10 rounded-xl px-4 py-2 whitespace-nowrap shadow-lg">
-                      <p className="text-white text-sm font-medium">{skill.name}</p>
-                    </div>
-                  </div>
-                </div>
+                <motion.article
+                  key={skill.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.08 }}
+                  className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-3xl p-7 shadow-xl hover:shadow-2xl hover:shadow-blue-500/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300"
+                >
+                  <Icon className="text-blue-300 mb-5" size={30} />
+                  <h4 className="text-xl font-bold text-white mb-3">{skill.title}</h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">{skill.description}</p>
+                </motion.article>
               );
             })}
           </div>
