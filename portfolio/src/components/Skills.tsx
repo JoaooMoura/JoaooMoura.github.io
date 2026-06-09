@@ -59,52 +59,49 @@ const softSkills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-32 px-6 border-t border-white/10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-900/10 via-transparent to-blue-900/10" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[150px]" />
+    <section id="skills" className="section-shell">
+      <div className="section-orb left-1/2 top-1/3 bg-[#C9A24D]" />
 
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="section-heading"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">Habilidades</h2>
-          <p className="text-gray-400 text-lg">Competências técnicas e comportamentais desenvolvidas nos meus projetos</p>
+          <span className="eyebrow">Skills</span>
+          <h2 className="section-title">Habilidades</h2>
+          <p className="section-subtitle">Competências técnicas e comportamentais desenvolvidas nos meus projetos</p>
         </motion.div>
 
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-white mb-10 text-center flex items-center justify-center gap-3">
-            <span className="w-2 h-8 bg-purple-500 rounded-full inline-block"></span>
-            Hard Skills
-          </h3>
+          <div className="mb-8 flex items-center justify-between gap-5 border-b border-white/[0.07] pb-5">
+            <h3 className="text-2xl font-black tracking-[-0.035em] text-[#F4F1E8] md:text-3xl">Hard Skills</h3>
+            <span className="h-px flex-1 bg-white/[0.07]" />
+          </div>
 
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {hardSkills.map((group, index) => {
               const Icon = group.icon;
               return (
                 <motion.article
                   key={group.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:shadow-purple-500/10 hover:border-white/30 transition-all duration-300"
+                  transition={{ delay: index * 0.06 }}
+                  className="panel-card p-7 transition duration-300 hover:-translate-y-1"
                 >
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
-                      <Icon className="text-white" size={24} />
+                  <div className="mb-6 flex items-center gap-4">
+                    <div className="grid h-12 w-12 place-items-center rounded-2xl border border-[#C9A24D]/30 bg-[#C9A24D]/10">
+                      <Icon className="text-[#C9A24D]" size={24} />
                     </div>
-                    <h4 className="text-2xl font-bold text-white">{group.title}</h4>
+                    <h4 className="text-2xl font-black tracking-[-0.035em] text-[#F4F1E8]">{group.title}</h4>
                   </div>
 
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-2.5">
                     {group.items.map((item) => (
-                      <span
-                        key={item}
-                        className="px-4 py-2 rounded-full text-sm font-semibold text-white bg-white/10 border border-white/20 hover:bg-white/15 transition-colors"
-                      >
+                      <span key={item} className="tag-pill">
                         {item}
                       </span>
                     ))}
@@ -116,26 +113,26 @@ export default function Skills() {
         </div>
 
         <div>
-          <h3 className="text-3xl font-bold text-white mb-10 text-center flex items-center justify-center gap-3">
-            <span className="w-2 h-8 bg-blue-500 rounded-full inline-block"></span>
-            Soft Skills
-          </h3>
+          <div className="mb-8 flex items-center justify-between gap-5 border-b border-white/[0.07] pb-5">
+            <h3 className="text-2xl font-black tracking-[-0.035em] text-[#F4F1E8] md:text-3xl">Soft Skills</h3>
+            <span className="h-px flex-1 bg-white/[0.07]" />
+          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {softSkills.map((skill, index) => {
               const Icon = skill.icon;
               return (
                 <motion.article
                   key={skill.title}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.08 }}
-                  className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-3xl p-7 shadow-xl hover:shadow-2xl hover:shadow-blue-500/10 hover:border-white/30 hover:-translate-y-1 transition-all duration-300"
+                  transition={{ delay: index * 0.05 }}
+                  className="panel-card p-7 transition duration-300 hover:-translate-y-1"
                 >
-                  <Icon className="text-blue-300 mb-5" size={30} />
-                  <h4 className="text-xl font-bold text-white mb-3">{skill.title}</h4>
-                  <p className="text-gray-400 text-sm leading-relaxed">{skill.description}</p>
+                  <Icon className="mb-5 text-[#77B7A6]" size={28} />
+                  <h4 className="mb-3 text-xl font-black tracking-[-0.03em] text-[#F4F1E8]">{skill.title}</h4>
+                  <p className="text-sm leading-relaxed text-[#A7ADB7]">{skill.description}</p>
                 </motion.article>
               );
             })}

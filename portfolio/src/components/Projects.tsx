@@ -5,19 +5,19 @@ import { projects } from '../data/projects';
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-32 px-6 border-t border-white/10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-purple-900/10 to-slate-950" />
-      <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-purple-500/20 rounded-full blur-[150px]" />
+    <section id="projects" className="section-shell">
+      <div className="section-orb left-1/3 top-32 bg-[#77B7A6]" />
 
-      <div className="container mx-auto max-w-screen-2xl relative z-10">
+      <div className="section-container max-w-screen-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="section-heading"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">Projetos</h2>
-          <p className="text-gray-400 text-lg">Projetos acadêmicos e pessoais desenvolvidos ao longo da minha formação</p>
+          <span className="eyebrow">Projetos</span>
+          <h2 className="section-title">Projetos</h2>
+          <p className="section-subtitle">Projetos acadêmicos e pessoais desenvolvidos ao longo da minha formação</p>
         </motion.div>
 
         <FeaturedProjects />
@@ -27,13 +27,16 @@ export default function Projects() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="mb-12 flex flex-col gap-3 border-b border-white/[0.07] pb-6 md:flex-row md:items-end md:justify-between"
           >
-            <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">Todos os Projetos</h3>
-            <p className="text-gray-400 text-lg">Outros projetos, estudos práticos e aplicações desenvolvidas</p>
+            <div>
+              <span className="eyebrow">Todos os Projetos</span>
+              <h3 className="text-3xl font-bold tracking-[-0.04em] text-[#F4F1E8] md:text-5xl">Todos os Projetos</h3>
+            </div>
+            <p className="max-w-2xl text-[#A7ADB7]">Outros projetos, estudos práticos e aplicações desenvolvidas</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -41,7 +44,7 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.05 }}
               >
                 <ProjectCard project={project} />
               </motion.div>

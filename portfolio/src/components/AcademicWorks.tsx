@@ -24,24 +24,24 @@ const workGroups = [
 
 export default function AcademicWorks() {
   return (
-    <section id="academic" className="py-32 px-6 border-t border-white/10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-blue-900/10 to-slate-950" />
-      <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[150px]" />
+    <section id="academic" className="section-shell">
+      <div className="section-orb left-[-6rem] top-1/4 bg-[#77B7A6]" />
 
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="section-heading"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">Trabalhos Acadêmicos</h2>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+          <span className="eyebrow">Acadêmico</span>
+          <h2 className="section-title">Trabalhos Acadêmicos</h2>
+          <p className="section-subtitle">
             Organização dos principais trabalhos, projetos integradores, relatórios técnicos e TCC desenvolvidos ao longo da minha formação.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid gap-6 lg:grid-cols-3">
           {workGroups.map((group, groupIndex) => {
             const Icon = group.icon;
             return (
@@ -50,26 +50,26 @@ export default function AcademicWorks() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: groupIndex * 0.1 }}
-                className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:border-white/30 transition-all duration-300"
+                transition={{ delay: groupIndex * 0.08 }}
+                className="panel-card p-7"
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg mb-6">
-                  <Icon className="text-white" size={28} />
+                <div className="mb-6 grid h-14 w-14 place-items-center rounded-2xl border border-[#C9A24D]/30 bg-[#C9A24D]/10">
+                  <Icon className="text-[#C9A24D]" size={26} />
                 </div>
 
-                <h3 className="text-2xl font-bold text-white mb-6">{group.title}</h3>
+                <h3 className="mb-6 text-2xl font-black tracking-[-0.035em] text-[#F4F1E8]">{group.title}</h3>
 
-                <div className="space-y-5">
+                <div className="space-y-4">
                   {group.items.map((item) => (
-                    <div key={item.id} className="rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 transition-colors">
-                      <p className="text-sm text-blue-300 font-semibold mb-2">{item.type}</p>
-                      <h4 className="text-white font-bold mb-2 leading-tight">{item.title}</h4>
-                      <p className="text-gray-400 text-sm leading-relaxed mb-4">{item.results}</p>
+                    <div key={item.id} className="compact-card p-5 transition-colors hover:border-[#C9A24D]/30">
+                      <p className="mb-2 text-xs font-bold uppercase tracking-[0.18em] text-[#C9A24D]">{item.type}</p>
+                      <h4 className="mb-2 font-bold leading-tight text-[#F4F1E8]">{item.title}</h4>
+                      <p className="mb-4 text-sm leading-relaxed text-[#A7ADB7]">{item.results}</p>
                       <a
                         href={item.repoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-purple-300 hover:text-purple-200 transition-colors"
+                        className="inline-flex items-center gap-2 text-sm font-bold text-[#C9A24D] transition-colors hover:text-[#F4F1E8]"
                       >
                         Acessar repositório
                         <ExternalLink size={14} />

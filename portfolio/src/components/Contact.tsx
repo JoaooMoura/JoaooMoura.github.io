@@ -30,33 +30,33 @@ const contacts = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 px-6 border-t border-white/10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-blue-900/10 to-slate-950" />
-      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[150px]" />
+    <section id="contact" className="section-shell">
+      <div className="section-orb right-[-8rem] top-1/4 bg-[#C9A24D]" />
 
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="section-heading mb-12"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">Contato</h2>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+          <span className="eyebrow">Contato</span>
+          <h2 className="section-title">Contato</h2>
+          <p className="section-subtitle">
             Estou em busca de estágio em desenvolvimento de software e aberto a oportunidades para atuar com front-end, full stack e projetos web.
           </p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-3xl p-8 md:p-10 shadow-xl"
+          className="panel-card p-7 md:p-10"
         >
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 mb-10">
+          <div className="mb-10 flex flex-col gap-8 border-b border-white/[0.07] pb-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <h3 className="text-3xl font-bold text-white mb-3">João Vitor de Moura</h3>
-              <p className="text-gray-400 flex items-center gap-2">
+              <h3 className="mb-3 text-3xl font-black tracking-[-0.04em] text-[#F4F1E8]">João Vitor de Moura</h3>
+              <p className="flex items-center gap-2 text-[#A7ADB7]">
                 <MapPin size={18} />
                 São José dos Campos, SP
               </p>
@@ -65,14 +65,14 @@ export default function Contact() {
             <a
               href="/curriculo.pdf"
               download="curriculo.pdf"
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-600 to-purple-700 rounded-2xl text-white font-semibold hover:from-blue-600 hover:via-purple-700 hover:to-purple-800 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/60 flex items-center justify-center gap-3 border border-purple-400/30"
+              className="btn-primary"
             >
               Baixar currículo
               <ExternalLink size={18} />
             </a>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {contacts.map((contact) => {
               const Icon = contact.icon;
               return (
@@ -81,11 +81,11 @@ export default function Contact() {
                   href={contact.href}
                   target={contact.href.startsWith('http') ? '_blank' : undefined}
                   rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-5 hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 transition-all duration-300"
+                  className="compact-card p-5 transition duration-300 hover:-translate-y-1 hover:border-[#C9A24D]/35"
                 >
-                  <Icon className="text-blue-300 mb-4" size={26} />
-                  <p className="text-white font-bold mb-1">{contact.label}</p>
-                  <p className="text-gray-400 text-sm break-words">{contact.value}</p>
+                  <Icon className="mb-4 text-[#C9A24D]" size={24} />
+                  <p className="mb-1 font-bold text-[#F4F1E8]">{contact.label}</p>
+                  <p className="break-words text-sm text-[#A7ADB7]">{contact.value}</p>
                 </a>
               );
             })}

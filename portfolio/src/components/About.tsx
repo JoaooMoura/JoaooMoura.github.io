@@ -54,82 +54,87 @@ export default function About() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.16,
       },
     },
   };
 
   const item = {
-    hidden: { opacity: 0, x: -20 },
-    show: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, y: 16 },
+    show: { opacity: 1, y: 0 },
   };
 
   return (
-    <section id="about" className="py-32 px-6 border-t border-white/10 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 via-transparent to-purple-900/10" />
-      <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[150px]" />
+    <section id="about" className="section-shell">
+      <div className="section-orb right-[-8rem] top-1/4 bg-[#C9A24D]" />
 
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="section-heading"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">Sobre Mim</h2>
-          <p className="text-gray-400 text-lg">Formação, trajetória e certificações</p>
+          <span className="eyebrow">Sobre</span>
+          <h2 className="section-title">Sobre Mim</h2>
+          <p className="section-subtitle">Formação, trajetória e certificações</p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="mb-16 grid gap-8 lg:grid-cols-[1.18fr_0.82fr]">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-3xl p-10 shadow-xl hover:shadow-2xl hover:border-white/30 transition-all duration-300 shadow-[inset_0_0_40px_rgba(255,255,255,0.05)]"
+            className="panel-card p-7 md:p-10"
           >
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-white mb-6">Perfil Profissional</h3>
+              <div className="flex flex-col gap-3 border-b border-white/[0.07] pb-6 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <span className="eyebrow">Perfil</span>
+                  <h3 className="text-3xl font-black tracking-[-0.04em] text-[#F4F1E8]">Perfil Profissional</h3>
+                </div>
+              </div>
 
-              <div className="space-y-4">
-                <p className="text-gray-300 leading-relaxed">
-                  Sou <span className="text-blue-400 font-semibold">João Vitor de Moura</span>, desenvolvedor full stack em formação, atualmente cursando
-                  <span className="text-purple-400 font-semibold"> Desenvolvimento de Software Multiplataforma</span> na FATEC e formado como técnico em Desenvolvimento de Sistemas pela ETEC Profª Ilza Nascimento Pintus.
+              <div className="space-y-5 text-[1rem] leading-8 text-[#A7ADB7]">
+                <p>
+                  Sou <span className="font-semibold text-[#F4F1E8]">João Vitor de Moura</span>, desenvolvedor full stack em formação, atualmente cursando
+                  <span className="font-semibold text-[#C9A24D]"> Desenvolvimento de Software Multiplataforma</span> na FATEC e formado como técnico em Desenvolvimento de Sistemas pela ETEC Profª Ilza Nascimento Pintus.
                 </p>
-                <p className="text-gray-300 leading-relaxed">
-                  Tenho maior afinidade com o ecossistema <span className="text-blue-400 font-semibold">JavaScript e TypeScript</span>, utilizando React no desenvolvimento de interfaces e Node.js na construção de aplicações e APIs. Também venho atuando com <span className="text-emerald-400 font-semibold">Java, Spring Boot, Python, MySQL, Docker e microsserviços</span>, principalmente nos projetos integradores da FATEC.
+                <p>
+                  Tenho maior afinidade com o ecossistema <span className="font-semibold text-[#F4F1E8]">JavaScript e TypeScript</span>, utilizando React no desenvolvimento de interfaces e Node.js na construção de aplicações e APIs. Também venho atuando com <span className="font-semibold text-[#77B7A6]">Java, Spring Boot, Python, MySQL, Docker e microsserviços</span>, principalmente nos projetos integradores da FATEC.
                 </p>
-                <p className="text-gray-300 leading-relaxed">
+                <p>
                   Além da formação técnica, também desenvolvo experiência profissional na área administrativa como
-                  <span className="text-cyan-400 font-semibold"> Jovem Aprendiz Administrativo na Braga Turismo</span>, onde atuo desde junho de 2025 com organização de documentos, manipulação de planilhas, acompanhamento de informações operacionais, apoio em demandas internas e comunicação entre setores. Essa vivência me ajuda a entender processos reais de uma empresa e a pensar em sistemas que resolvem problemas do dia a dia administrativo.
+                  <span className="font-semibold text-[#F4F1E8]"> Jovem Aprendiz Administrativo na Braga Turismo</span>, onde atuo desde junho de 2025 com organização de documentos, manipulação de planilhas, acompanhamento de informações operacionais, apoio em demandas internas e comunicação entre setores. Essa vivência me ajuda a entender processos reais de uma empresa e a pensar em sistemas que resolvem problemas do dia a dia administrativo.
                 </p>
-                <p className="text-gray-300 leading-relaxed">
+                <p>
                   Busco oportunidades de estágio para aplicar meus conhecimentos em projetos reais, evoluir tecnicamente e contribuir com soluções bem estruturadas, funcionais e pensadas para o usuário. Tenho interesse em desenvolvimento web, APIs REST, front-end, full stack, sistemas empresariais e soluções que conectem tecnologia com rotinas administrativas e operacionais.
                 </p>
               </div>
 
-              <div className="mt-8 rounded-2xl border border-cyan-400/20 bg-cyan-500/10 p-6 shadow-lg shadow-cyan-500/10">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg">
-                    <BriefcaseBusiness className="text-white" size={22} />
+              <div className="compact-card p-6">
+                <div className="mb-4 flex items-center gap-4">
+                  <div className="grid h-12 w-12 place-items-center rounded-2xl border border-[#77B7A6]/30 bg-[#77B7A6]/10">
+                    <BriefcaseBusiness className="text-[#77B7A6]" size={22} />
                   </div>
                   <div>
-                    <h4 className="text-white font-bold text-lg">Experiência administrativa</h4>
-                    <p className="text-cyan-200 text-sm">Braga Turismo · Jun/2025 - Atual</p>
+                    <h4 className="text-lg font-bold text-[#F4F1E8]">Experiência administrativa</h4>
+                    <p className="text-sm text-[#A7ADB7]">Braga Turismo · Jun/2025 - Atual</p>
                   </div>
                 </div>
-                <ul className="space-y-2 text-sm text-gray-300 leading-relaxed">
+                <ul className="space-y-2 text-sm leading-relaxed text-[#A7ADB7]">
                   <li>• Organização de documentos e apoio em rotinas administrativas.</li>
                   <li>• Manipulação de planilhas e acompanhamento de informações operacionais.</li>
                   <li>• Comunicação entre setores, controle de demandas e atenção a detalhes.</li>
                 </ul>
               </div>
 
-              <div className="pt-6">
+              <div className="pt-2">
                 <a
                   href="/curriculo.pdf"
                   download="curriculo.pdf"
                   rel="noopener noreferrer"
-                  className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-600 to-purple-700 rounded-2xl text-white font-semibold hover:from-blue-600 hover:via-purple-700 hover:to-purple-800 hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/60 flex items-center justify-center gap-3 border border-purple-400/30"
+                  className="btn-primary w-full"
                 >
                   <Download size={20} />
                   Baixar currículo
@@ -143,40 +148,40 @@ export default function About() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="space-y-8"
+            className="space-y-6"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg">
-                <GraduationCap className="text-white" size={24} />
+            <div className="flex items-center gap-4">
+              <div className="grid h-12 w-12 place-items-center rounded-2xl border border-[#77B7A6]/30 bg-[#77B7A6]/10">
+                <GraduationCap className="text-[#77B7A6]" size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-white">Formação Acadêmica</h3>
+              <h3 className="text-2xl font-black tracking-[-0.03em] text-[#F4F1E8]">Formação Acadêmica</h3>
             </div>
 
-            <div className="relative pl-8 border-l-2 border-white/20">
+            <div className="relative space-y-5 border-l border-white/[0.1] pl-6">
               {education.map((edu, index) => (
-                <motion.div key={index} variants={item} className="relative mb-10 last:mb-0">
-                  <div className="absolute -left-[37px] w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg shadow-purple-500/50 border-4 border-slate-950">
-                    <Calendar className="text-white" size={18} />
+                <motion.div key={index} variants={item} className="relative">
+                  <div className="absolute -left-[31px] top-5 grid h-10 w-10 place-items-center rounded-full border border-white/[0.12] bg-[#0B0F14]">
+                    <Calendar className="text-[#C9A24D]" size={17} />
                   </div>
 
-                  <div className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-2xl p-6 hover:bg-white/15 hover:border-white/30 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl shadow-[inset_0_0_30px_rgba(255,255,255,0.05)]">
-                    <div className="flex items-start justify-between mb-3 gap-3">
-                      <span className="text-sm font-semibold text-blue-400 bg-blue-500/20 px-3 py-1 rounded-full border border-blue-500/30">
+                  <div className="panel-card p-6">
+                    <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+                      <span className="tag-pill">
                         {edu.period}
                       </span>
                       <span
-                        className={`text-xs font-semibold px-3 py-1 rounded-full ${
+                        className={`rounded-full border px-3 py-1 text-xs font-bold ${
                           edu.status === 'Em andamento'
-                            ? 'text-green-400 bg-green-500/20 border border-green-500/30'
-                            : 'text-gray-400 bg-gray-500/20 border border-gray-500/30'
+                            ? 'border-[#77B7A6]/30 bg-[#77B7A6]/10 text-[#77B7A6]'
+                            : 'border-white/[0.12] bg-white/[0.04] text-[#A7ADB7]'
                         }`}
                       >
                         {edu.status}
                       </span>
                     </div>
-                    <h4 className="text-xl font-bold text-white mb-2">{edu.title}</h4>
-                    <p className="text-gray-300 mb-1">{edu.institution}</p>
-                    <p className="text-sm text-gray-400">{edu.level}</p>
+                    <h4 className="mb-2 text-xl font-black tracking-[-0.03em] text-[#F4F1E8]">{edu.title}</h4>
+                    <p className="mb-1 text-[#C9CED6]">{edu.institution}</p>
+                    <p className="text-sm text-[#717986]">{edu.level}</p>
                   </div>
                 </motion.div>
               ))}
@@ -190,14 +195,14 @@ export default function About() {
           viewport={{ once: true }}
           className="mt-20"
         >
-          <div className="flex items-center gap-3 mb-10">
-            <div className="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-xl flex items-center justify-center shadow-lg">
-              <Award className="text-white" size={24} />
+          <div className="mb-8 flex items-center gap-4 border-b border-white/[0.07] pb-5">
+            <div className="grid h-12 w-12 place-items-center rounded-2xl border border-[#C9A24D]/30 bg-[#C9A24D]/10">
+              <Award className="text-[#C9A24D]" size={24} />
             </div>
-            <h3 className="text-2xl font-bold text-white">Certificações</h3>
+            <h3 className="text-2xl font-black tracking-[-0.03em] text-[#F4F1E8]">Certificações</h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {certificates.map((cert, index) => {
               const Icon = cert.icon;
               return (
@@ -206,36 +211,36 @@ export default function About() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-2xl overflow-hidden hover:bg-white/15 hover:border-white/30 hover:-translate-y-2 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-yellow-500/20 shadow-[inset_0_0_30px_rgba(255,255,255,0.05)] group"
+                  transition={{ delay: index * 0.08 }}
+                  className="group overflow-hidden rounded-[1.4rem] border border-white/[0.08] bg-[#0D1117]/88 shadow-[0_18px_55px_rgba(0,0,0,0.24)] transition duration-300 hover:-translate-y-1 hover:border-[#C9A24D]/35"
                 >
                   {cert.imageUrl ? (
-                    <a href={cert.credentialUrl} target="_blank" rel="noopener noreferrer" className="block h-40 bg-white/95 overflow-hidden">
-                      <img src={cert.imageUrl} alt={`Certificado ${cert.name}`} className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300" />
+                    <a href={cert.credentialUrl} target="_blank" rel="noopener noreferrer" className="block h-40 overflow-hidden border-b border-white/[0.07] bg-[#F4F1E8]">
+                      <img src={cert.imageUrl} alt={`Certificado ${cert.name}`} className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.025]" />
                     </a>
                   ) : (
-                    <div className="h-40 bg-gradient-to-br from-yellow-500/20 via-orange-500/10 to-purple-500/20 flex items-center justify-center border-b border-white/10">
-                      <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-3xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                        <Icon className="text-white" size={40} />
+                    <div className="flex h-40 items-center justify-center border-b border-white/[0.07] bg-white/[0.035]">
+                      <div className="grid h-20 w-20 place-items-center rounded-3xl border border-[#C9A24D]/30 bg-[#C9A24D]/10">
+                        <Icon className="text-[#C9A24D]" size={38} />
                       </div>
                     </div>
                   )}
 
                   <div className="p-6">
-                    <div className="flex items-start justify-between gap-3 mb-3">
-                      <h4 className="text-white font-semibold text-base leading-snug">{cert.name}</h4>
-                      <span className="shrink-0 text-[10px] uppercase tracking-wide text-yellow-300 bg-yellow-500/10 border border-yellow-500/30 px-2 py-1 rounded-full">
+                    <div className="mb-3 flex items-start justify-between gap-3">
+                      <h4 className="text-base font-bold leading-snug text-[#F4F1E8]">{cert.name}</h4>
+                      <span className="shrink-0 rounded-full border border-[#C9A24D]/30 bg-[#C9A24D]/10 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-[#C9A24D]">
                         {cert.type}
                       </span>
                     </div>
-                    <p className="text-sm text-gray-400">{cert.issuer}</p>
-                    <p className="text-xs text-gray-500 mt-1">{cert.year}</p>
+                    <p className="text-sm text-[#A7ADB7]">{cert.issuer}</p>
+                    <p className="mt-1 text-xs text-[#717986]">{cert.year}</p>
 
                     <a
                       href={cert.credentialUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-yellow-300 hover:text-yellow-200 transition-colors"
+                      className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#C9A24D] transition-colors hover:text-[#F4F1E8]"
                     >
                       {cert.type === 'PDF' ? <FileText size={16} /> : <ExternalLink size={16} />}
                       Ver credencial
