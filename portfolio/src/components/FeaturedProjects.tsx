@@ -75,6 +75,17 @@ export default function FeaturedProjects() {
                     <p className="text-sm leading-relaxed text-[#A7ADB7]">{project.challenge}</p>
                   </div>
                   <div className="compact-card p-5 md:col-span-2">
+                    <h5 className="mb-3 font-bold text-[#F4F1E8]">Soft skills adquiridas</h5>
+                    <div className="mb-3 flex flex-wrap gap-2">
+                      {project.softSkills.map((skill, i) => (
+                        <span key={i} className="tag-pill">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                    <p className="text-sm leading-relaxed text-[#A7ADB7]">{project.softSkillDevelopment}</p>
+                  </div>
+                  <div className="compact-card p-5 md:col-span-2">
                     <h5 className="mb-2 font-bold text-[#F4F1E8]">Minha participação</h5>
                     <p className="text-sm leading-relaxed text-[#A7ADB7]">{project.role}</p>
                   </div>

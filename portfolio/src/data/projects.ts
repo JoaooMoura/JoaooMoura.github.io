@@ -8,6 +8,8 @@ export interface Project {
   solution: string;
   methodology: string;
   challenge: string;
+  softSkills: string[];
+  softSkillDevelopment: string;
   role: string;
   results: string;
   techs: string[];
@@ -33,6 +35,9 @@ export const projects: Project[] = [
       'Scrum, com organização por sprints, divisão de tarefas no Jira, acompanhamento de entregas e versionamento pelo GitHub.',
     challenge:
       'Compreender o propósito das regras de horas e custos antes de implementar as telas e serviços, além de evoluir no uso de Java, Spring Boot, microsserviços, gateway e integrações entre módulos.',
+    softSkills: ['Comunicação', 'Proatividade', 'Trabalho em equipe', 'Adaptabilidade'],
+    softSkillDevelopment:
+      'Desenvolvi essas habilidades ao lidar com regras financeiras, integrações entre microsserviços e correções de bugs que exigiam alinhamento com colegas, entendimento do impacto de cada entrega e atenção aos prazos das sprints. Nesse projeto consegui desenvolver melhoro minhas atitudes em grupo, pois nesse semestre tivemos uma equipe com mais de 8 pessoas. E também pude ser mais proativo, contribuindo com o grupo, ajudando quem estava com dificuldades e dando uma refinada no projeto',
     role:
       'Atuei como desenvolvedor full stack, com foco no front-end e no microsserviço financeiro. Implementei dashboard, filtros por período, tela de auditoria, controle de acesso, bloqueio de rotas, integração via gateway e regras de cálculo/limite de horas.',
     results:
@@ -58,6 +63,9 @@ export const projects: Project[] = [
       'Scrum, com divisão de responsabilidades, organização por etapas, validação do protótipo e acompanhamento contínuo das entregas do TCC.',
     challenge:
       'Entender a finalidade didática do projeto e integrar tecnologias que ainda estavam em aprendizado, principalmente React Native, Unity, Vuforia, C# e comunicação entre app mobile e ambiente 3D.',
+    softSkills: ['Trabalho em equipe', 'Comunicação', 'Gestão de Equipe' ,'Criatividade', 'Organização'],
+    softSkillDevelopment:
+      'Adquiri essas soft skills durante a organização do TCC, dividindo responsabilidades, validando ideias com o grupo, ajustando a proposta didática e preparando uma solução que precisava ser compreendida também por quem não era da área técnica. Nesse projeto eu consegui desenvolver bem minha softskill de gerenciamento de equipe, por ter conseguido orgazinar e melhorar a performance da equipe',
     role:
       'Participei do desenvolvimento do aplicativo mobile, da integração com o ambiente de realidade aumentada e da organização da experiência didática do projeto.',
     results:
@@ -83,6 +91,9 @@ export const projects: Project[] = [
       'Scrum, com backlog, sprints, divisão de tarefas por módulos, entregas incrementais e colaboração entre front-end, back-end e banco de dados.',
     challenge:
       'Compreender o motivo de cada fluxo de negócio do CRM e transformar necessidades administrativas em telas úteis, enquanto aprofundava React, TypeScript, Node.js e integração com banco de dados.',
+    softSkills: ['Colaboração', 'Organização', 'Comunicação'],
+    softSkillDevelopment:
+      'Desenvolvi essas habilidades ao trabalhar em vários módulos do CRM, alinhar requisitos com a equipe, adaptar telas conforme as necessidades do projeto e organizar entregas incrementais dentro das sprints.',
     role:
       'Atuei principalmente no front-end e em funcionalidades full stack, implementando telas, filtros, gráficos, geração de certificados em PDF, cotações, agenda pessoal, checklists operacionais e correções de bugs.',
     results:
@@ -108,6 +119,9 @@ export const projects: Project[] = [
       'Scrum, com desenvolvimento em equipe, divisão das funcionalidades por sprint, validação das entregas e versionamento do código no GitHub.',
     challenge:
       'Entender o significado dos dados comerciais e o objetivo das visualizações antes de montar telas, gráficos e tabelas, além de evoluir no uso de HTML, CSS, JavaScript, Python e Flask.',
+    softSkills: ['Aprendizado rápido', 'Trabalho em equipe', 'Comunicação'],
+    softSkillDevelopment:
+      'Por ser o primeiro Projeto Integrador, desenvolvi essas habilidades ao aprender a trabalhar com Scrum, interpretar dados de importação e exportação, alinhar decisões de interface com o grupo e revisar detalhes de tabelas, filtros e gráficos.',
     role:
       'Atuei no front-end, construindo estrutura visual, tabelas, gráficos, navbar, footer, semântica HTML, estilização e melhorias de usabilidade.',
     results:
@@ -133,6 +147,9 @@ export const projects: Project[] = [
       'Scrum aplicado à organização individual do projeto, com divisão por etapas, priorização de funcionalidades e evolução incremental da solução.',
     challenge:
       'Entender a finalidade de cada entidade e regra de negócio do domínio de aeronaves, além de consolidar React, TypeScript, Node.js, Prisma, banco de dados e geração de relatórios.',
+    softSkills: ['Autonomia', 'Organização', 'Resolução de problemas'],
+    softSkillDevelopment:
+      'Por ser um projeto individual, precisei organizar o escopo, priorizar funcionalidades, estudar ferramentas novas e resolver problemas técnicos sem depender de uma equipe direta, fortalecendo disciplina e tomada de decisão.',
     role:
       'Desenvolvi a aplicação com foco em organização de código, regras de negócio, integração com banco de dados e construção de interface administrativa.',
     results:
@@ -158,6 +175,9 @@ export const projects: Project[] = [
       'Scrum aplicado ao planejamento individual, com separação por etapas, evolução do back-end para o front-end e organização incremental das funcionalidades.',
     challenge:
       'Compreender o porquê das regras de hospedagem e dos padrões de projeto antes de aplicar a solução, além de evoluir na componentização com React e na organização do código TypeScript.',
+    softSkills: ['Pensamento analítico', 'Autonomia', 'Organização', 'Criatividade'],
+    softSkillDevelopment:
+      'Desenvolvi essas competências ao analisar regras de domínio, aplicar padrões de projeto, separar responsabilidades entre back-end e front-end e manter uma evolução organizada entre as etapas AV3 e AV4.',
     role:
       'Desenvolvi a estrutura do back-end e a interface front-end, trabalhando com organização de classes, componentes, fluxo de navegação e representação das regras do domínio.',
     results:
@@ -183,6 +203,9 @@ export const projects: Project[] = [
       'Scrum aplicado à organização pessoal do desenvolvimento, com divisão das funcionalidades por etapas, revisão visual e melhoria incremental.',
     challenge:
       'Entender o fluxo de navegação esperado em uma loja virtual e praticar React, TypeScript, Tailwind CSS e Firebase em um projeto com foco em experiência do usuário.',
+    softSkills: ['Criatividade', 'Autonomia', 'Atenção ao usuário', 'Organização visual'],
+    softSkillDevelopment:
+      'Aprimorei essas habilidades ao planejar a experiência de compra, organizar produtos e componentes, testar diferentes soluções visuais e ajustar a interface pensando na clareza para o usuário final.',
     role:
       'Desenvolvi a interface e a experiência de navegação, aplicando React, TypeScript e estilização responsiva.',
     results:
@@ -208,6 +231,9 @@ export const projects: Project[] = [
       'Scrum aplicado à organização pessoal do projeto, com backlog de funcionalidades, entregas por partes e ajustes incrementais na interface.',
     challenge:
       'Entender a finalidade de busca, categorização e organização de conteúdo em uma plataforma de streaming, praticando React, TypeScript e integração com API.',
+    softSkills: ['Criatividade', 'Autonomia', 'Organização'],
+    softSkillDevelopment:
+      'Desenvolvi essas soft skills ao estudar referências de interface, organizar conteúdos por categoria, ajustar a navegação e evoluir o projeto de forma independente com base em testes e melhorias incrementais.',
     role:
       'Desenvolvi a interface, organização de componentes e integração de dados para exibição de conteúdos.',
     results:

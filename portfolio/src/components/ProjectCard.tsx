@@ -9,7 +9,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   const hasProjectPreview = Boolean(project.deployUrl) && !project.deployUrl.includes('github.com');
 
   return (
-    <article className="group flex h-full min-h-[720px] flex-col overflow-hidden rounded-[1.6rem] border border-white/[0.08] bg-[#0D1117]/88 shadow-[0_18px_60px_rgba(0,0,0,0.26)] transition duration-300 hover:-translate-y-1 hover:border-[#C9A24D]/35">
+    <article className="group flex h-full min-h-[840px] flex-col overflow-hidden rounded-[1.6rem] border border-white/[0.08] bg-[#0D1117]/88 shadow-[0_18px_60px_rgba(0,0,0,0.26)] transition duration-300 hover:-translate-y-1 hover:border-[#C9A24D]/35">
       <div className="relative h-52 overflow-hidden border-b border-white/[0.07] bg-[#090D12]">
         <img
           src={project.imageUrl}
@@ -34,6 +34,19 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="compact-card mb-5 px-4 py-3">
           <p className="mb-1 text-sm font-bold text-[#F4F1E8]">Metodologia aplicada</p>
           <p className="text-sm leading-relaxed text-[#A7ADB7]">{project.methodology}</p>
+        </div>
+
+
+        <div className="compact-card mb-5 px-4 py-3">
+          <p className="mb-2 text-sm font-bold text-[#F4F1E8]">Soft skills adquiridas</p>
+          <div className="mb-3 flex flex-wrap gap-2">
+            {project.softSkills.map((skill, index) => (
+              <span key={index} className="tag-pill">
+                {skill}
+              </span>
+            ))}
+          </div>
+          <p className="text-sm leading-relaxed text-[#A7ADB7]">{project.softSkillDevelopment}</p>
         </div>
 
         <div className="mb-5 flex-1 space-y-3 text-sm">

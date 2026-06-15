@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Code2, Database, Wrench, Users, MessageCircle, ClipboardCheck, Lightbulb, Target, BriefcaseBusiness } from 'lucide-react';
+import { Code2, Database, Wrench, Users, MessageCircle, ClipboardCheck, Lightbulb, Target, BriefcaseBusiness, Brain } from 'lucide-react';
 
 const hardSkills = [
   {
@@ -54,6 +54,11 @@ const softSkills = [
     title: 'Aprendizado contínuo',
     description: 'Busca constante por evolução técnica em front-end, back-end, banco de dados, microsserviços e ferramentas de desenvolvimento.',
     icon: Target,
+  },
+    {
+    title: 'Pensamento analítico',
+    description: 'Capacidade de analisar cenários, identificar padrões, entender causas de problemas e tomar decisões com base em dados, lógica e contexto do projeto. ',
+    icon: Brain,
   },
 ];
 
